@@ -1,3 +1,4 @@
+// File: part3_stream_numbers.dart
 Stream<int> numberStream() async* {
   for (var i = 1; i <= 5; i++) {
     yield i;
@@ -5,13 +6,9 @@ Stream<int> numberStream() async* {
   }
 }
 
-void listenToNumbers() {
+void main() {
   numberStream().listen((num) {
     print('New: $num');
   });
-}
-
-void main() {
-  listenToNumbers();
-  print('Listening to numbers...');
+  print('List of numbers...');
 }
